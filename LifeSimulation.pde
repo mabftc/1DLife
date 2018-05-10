@@ -41,13 +41,13 @@ void drawGrid() {
 void nextState() {
   for (int col = 1; col < 499; col++) {
     if (grid[globalTime][col - 1] == true && grid[globalTime][col] == true && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[0];
-    if (grid[globalTime][col - 1] == true && grid[globalTime][col] == true && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[1];
-    if (grid[globalTime][col - 1] == true && grid[globalTime][col] == false && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[2];
-    if (grid[globalTime][col - 1] == true && grid[globalTime][col] == false && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[3];
-    if (grid[globalTime][col - 1] == false && grid[globalTime][col] == true && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[4];
-    if (grid[globalTime][col - 1] == false && grid[globalTime][col] == true && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[5];
-    if (grid[globalTime][col - 1] == false && grid[globalTime][col] == false && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[6];
-    if (grid[globalTime][col - 1] == false && grid[globalTime][col] == false && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[7];
+    else if (grid[globalTime][col - 1] == true && grid[globalTime][col] == true && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[1];
+    else if (grid[globalTime][col - 1] == true && grid[globalTime][col] == false && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[2];
+    else if (grid[globalTime][col - 1] == true && grid[globalTime][col] == false && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[3];
+    else if (grid[globalTime][col - 1] == false && grid[globalTime][col] == true && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[4];
+    else if (grid[globalTime][col - 1] == false && grid[globalTime][col] == true && grid[globalTime][col + 1] == false) grid[globalTime + 1][col] = test[5];
+    else if (grid[globalTime][col - 1] == false && grid[globalTime][col] == false && grid[globalTime][col + 1] == true) grid[globalTime + 1][col] = test[6];
+    else grid[globalTime + 1][col] = test[7];
   }
   globalTime++;
 }
